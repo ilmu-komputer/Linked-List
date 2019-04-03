@@ -1,1 +1,23 @@
+#include <iostream> //File Header Iostream
+#include <math.h> //File Header Math
+#include <conio.h> //File Header Conio
+#include <stdio.h>
 
+using namespace std;
+
+struct ListNode { //Deklarasi Linked List
+int data;   
+ListNode *next;
+};  
+
+ListNode *head, *tail;  //deklarasi pointer dalam linked list
+
+void init(){  //Fungsi untuk inisialisasi awal linked list
+head = NULL;
+tail = NULL;  //Untuk pertama kali, head dan tail bernilai NULL
+}
+
+int isEmpty(){  //Fungsi untuk mengetahui apakah Linked list kosong atau ada isinya
+if(tail == NULL) return 1;
+else return 0;
+}
