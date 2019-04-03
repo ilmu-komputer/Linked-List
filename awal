@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+struct Node{
+	double n;
+};
+
+struct listnode{
+	Node a;
+	listnode *next;
+}
+
+listnode *head=NULL;
+bool isEmpty(){
+	return head==NULL;
+}
+
+void Depan(double nNode){
+	listnode *baru=new listnode();
+	baru->a
+}
