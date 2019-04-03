@@ -16,7 +16,4 @@ bool isEmpty(){
 	return head==NULL;
 }
 
-void Depan(double nNode){
-	listnode *baru=new listnode();
-	baru->a
-}
+
