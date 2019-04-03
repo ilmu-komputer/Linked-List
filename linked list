@@ -178,3 +178,63 @@ void tampil(){   		//Fungsi untuk menampilkan linked list yang telah di input / 
 	}else
 		cout<<"Masih Kosong"<<endl;
 }
+void clrscr(){
+	system("cls");}
+main(){
+int pil;
+do{
+	clrscr();
+	int n,b;
+	cout<<"1.Masukkan Depan"<<endl;
+	cout<<"2.Masukkan Posisi"<<endl;
+	cout<<"3.Masukkan Belakang"<<endl;
+	cout<<"4.Lihat Data"<<endl;
+	cout<<"5.Hapus Depan"<<endl;
+	cout<<"6.Hapus Data Yang Diinginkan"<<endl;
+	cout<<"7.Hapus Belakang"<<endl;
+	cout<<"8.Keluar"<<endl;
+	cout<<"Masukkan Pilihan Anda :";pil=getche();
+	
+switch(pil){
+	case '1' : clrscr();
+	cout<<"Masukkan data :";cin>>n;
+	isEmpty();
+	insertDepan(n);
+	break;
+	
+	case '2' : clrscr();
+	cout<<"Masukkan letak :";cin>>n;cout<<"Masukkan nilai :";cin>>b;
+	isEmpty();
+	tambahBasing (n,b);
+	break;
+	
+	case '3' : clrscr();
+	cout<<"Masukkan data :";cin>>n;
+	isEmpty();
+	tambahBelakang(n);
+	break;
+	
+	case '4' : clrscr();
+	isEmpty();
+	tampil();
+	break;
+	
+	case '5' : clrscr();
+	isEmpty();;
+	hapusDepan();
+	break;
+	
+	case '6' : clrscr();
+	cout<<"Masukkan Data :";cin>>n;
+	isEmpty();
+	hapusYangDiinginkan(n);
+	break;
+	
+	case '7' : clrscr();
+	isEmpty();
+	hapusBelakang();
+	}
+	getch();
+	}while(pil!='8');
+	return 0;}
+
