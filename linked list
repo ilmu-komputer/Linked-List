@@ -53,3 +53,37 @@ void tambahBasing(int letak, int nilai){
 	after=baru;
 	cout<<"\n\nData "<<nilai<<" Dimasukkan ke Posisi "<<letak<<endl;
   }
+void tambahBelakang(int databaru){
+	ListNode *baru,*bantu;
+	baru=new ListNode;
+	baru->data = databaru;
+	baru->next = NULL;
+	
+	if(isEmpty()==1){
+		head=baru;
+		tail=baru;
+		tail->next=NULL;
+	}else{
+		tail->next=baru;
+		tail=baru;
+	}
+	cout<<"Data masuk\n";
+}
+
+void hapusDepan(){
+	ListNode *hapus;
+	int d;
+	if(isEmpty()==0){
+		if(head!=tail){
+			hapus=head;
+			d=hapus->data;
+			head=head->next;
+			delete hapus;
+		}else{
+			d=tail->data;
+			head=tail=NULL;
+		}
+	cout<<"%d terhapus\n",d;
+	}else cout<<"Masih kosong\n";
+}
+
