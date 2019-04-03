@@ -38,6 +38,42 @@ void insertDepan(int databaru){
     cout<<"Data masuk\n";
 }
 
+void hapusBelakang(){
+	ListNode *bantu,*hapus;
+	int d;
+	if(isEmpty()==0){
+		bantu=head;
+		if(head!=tail){
+			while(bantu->next!=tail){
+				bantu=bantu->next;
+			}
+			hapus=tail;
+			tail=bantu;
+			d=hapus->data;
+			delete hapus;
+			tail->next=NULL;
+		}else{
+			d=tail->data;
+			head=tail=NULL;
+		}
+	cout<<d<<" terhapus\n";
+	}else cout<<"Masih kosong\n";
+}
+
+
+void tampil(){   //Fungsi untuk menampilkan linked list yang telah di input / di delete
+	ListNode *bantu;  //pointer yang digunakan yaitu bantu
+	bantu=head;  // Nilai bantu= Nilai yang ada di head
+	if(isEmpty()==0){  // periksa apakah return 0(bernilai)
+		while(bantu!=NULL){ //Selama bantu tidak sama dengan NULL, maka di eksekusi
+			cout<<bantu->data<<endl;  // tampilkan di monitor nilai bantu->data
+			bantu=bantu->next;  //Nilai bantu= nilai bantu selanjutnya
+		}
+	}else
+		cout<<"Masih Kosong"<<endl;
+}
+
+
 void tambahBasing(int letak, int nilai){
 	ListNode *before=new ListNode;
 	ListNode *after=new ListNode;
@@ -101,4 +137,38 @@ void hapusYangDiinginkan(int databaru){
 		}
 		cout<<"%d terhapus\n",a;
 	}else printf("Masih kosong\n");
+}
+
+void hapusBelakang(){
+	ListNode *bantu,*hapus;
+	int d;
+	if(isEmpty()==0){
+		bantu=head;
+		if(head!=tail){
+			while(bantu->next!=tail){
+				bantu=bantu->next;
+			}
+			hapus=tail;
+			tail=bantu;
+			d=hapus->data;
+			delete hapus;
+			tail->next=NULL;
+		}else{
+			d=tail->data;
+			head=tail=NULL;
+		}
+	cout<<d<<" terhapus\n";
+	}else cout<<"Masih kosong\n";
+}
+
+void tampil(){   		//Fungsi untuk menampilkan linked list yang telah di input / di delete
+	ListNode *bantu; 	//pointer yang digunakan yaitu bantu
+	bantu=head;  		// Nilai bantu= Nilai yang ada di head
+	if(isEmpty()==0){  	// periksa apakah return 0(bernilai)
+		while(bantu!=NULL){ 			//Selama bantu tidak sama dengan NULL, maka di eksekusi
+			cout<<bantu->data<<endl;  	// tampilkan di monitor nilai bantu->data
+			bantu=bantu->next;  		//Nilai bantu= nilai bantu selanjutnya
+		}
+	}else
+		cout<<"Masih Kosong"<<endl;
 }
