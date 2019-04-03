@@ -86,4 +86,19 @@ void hapusDepan(){
 	cout<<"%d terhapus\n",d;
 	}else cout<<"Masih kosong\n";
 }
-
+void hapusYangDiinginkan(int databaru){
+	ListNode *bantu,*hapus;
+	int a;
+	if(isEmpty()==0){
+		if(head!=tail){
+			hapus=bantu;
+			a=hapus->data;
+			head=head->next;
+			delete hapus;
+		}else{
+			a=tail->data;
+			head=tail=NULL;
+		}
+		cout<<"%d terhapus\n",a;
+	}else printf("Masih kosong\n");
+}
