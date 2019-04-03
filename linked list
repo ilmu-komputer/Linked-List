@@ -21,3 +21,35 @@ int isEmpty(){  //Fungsi untuk mengetahui apakah Linked list kosong atau ada isi
 if(tail == NULL) return 1;
 else return 0;
 }
+
+void insertDepan(int databaru){
+  ListNode *baru;
+  baru = new ListNode;
+  baru->data = databaru;
+  baru->next = NULL;
+  if(isEmpty()==1){
+    head=tail=baru;
+    tail->next=NULL;
+    }
+    else {
+    baru->next = head;
+    head = baru;
+    }
+    cout<<"Data masuk\n";
+}
+
+void tambahBasing(int letak, int nilai){
+	ListNode *before=new ListNode;
+	ListNode *after=new ListNode;
+	ListNode *baru=new ListNode;
+	after=head;
+	for(int i=1; i<letak;i++){
+		before=after;
+		after=after->next;
+	}
+	baru->data=nilai;
+	before->next=baru;
+	baru->next=after;
+	after=baru;
+	cout<<"\n\nData "<<nilai<<" Dimasukkan ke Posisi "<<letak<<endl;
+  }
